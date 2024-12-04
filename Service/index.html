@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infusion Pump</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include CryptoJS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Infusion Pump</h1>
+        <p>Select medicine, rate, and volume to administer:</p>
+        <form>
+            <label for="medicine">Medicine:</label>
+            <select id="medicine" name="medicine">
+                <option value="penicillin">Penicillin</option>
+                <option value="insulin">Insulin</option>
+                <option value="heparin">Heparin</option>
+                <option value="paracetamol">Paracetamol</option>
+            </select>
+            <!-- Securing systems is the antidote to the vulnerabilities that threaten our digital health --> 
+            <br>
+            <label for="rate">Rate (minutes):</label>
+            <input type="number" id="rate" name="rate" min="15" max="60" step="15">
+            <br>
+            <label for="volume">Volume (ml):</label>
+            <input type="number" id="volume" name="volume">
+            <br>
+            <button type="submit">Start Administration</button>
+        </form>
+        <div id="output" style="margin-top: 15px; font-family: monospace; color: green;"></div> <!-- For encrypted flag -->
+        <div id="hint" style="margin-top: 10px; color: gray; font-style: italic;"></div> <!-- For hint -->
+        <footer>
+            <p>&copy; 2024 Inf-Pump CTF Service</p>
+        </footer>
+    </div>
+    <script src="inf-pump.js"></script> <!-- Include the JavaScript file -->
+</body>
+</html>
